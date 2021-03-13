@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="header">
+    <div class="header" id="inicio">
         <div class="menu">
             <ul>
-                <li><a href="#" class="enlacesNav hvr-underline-from-center">Portfolio</a></li>
-                <li><a href="#" class="enlacesNav hvr-underline-from-center">Sobre mí</a></li>
-                <li><a href="#" class="enlacesNav hvr-underline-from-center">Contacto</a></li>
+                <li><a href="#portfolio" class="enlacesNav hvr-underline-from-center">Portfolio</a></li>
+                <li><a href="#sobre-mi" class="enlacesNav hvr-underline-from-center">Sobre mí</a></li>
+                <li><a href="#contacto" class="enlacesNav hvr-underline-from-center">Contacto</a></li>
             </ul>
         </div>
         <div class="contenedor-titulo">
@@ -35,7 +35,7 @@
     </div> <!-- fin del header -->
 
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <h2>Portfolio</h2>
         <div class="contenedor-cards">
             <div class="card-proyecto">
@@ -69,28 +69,29 @@
                 <a href="#" class="hvr-pulse">Echale un vistazo</a>
             </div>
         </div>
-    </section>
-    <section>
+    </section> <!-- fin .portfolio -->
+
+    <section id="sobre-mi">
         <h2>Sobre mí</h2>
-        <p></p>
+        <p>Hola, mi nombre es Leonel y estoy encantado de que hayas llegado hasta aquí. Soy un apasionado por la tecnología, aunque también me seduce el lado del diseño. Mis primeros pasos fueron como técnico en reparación de pc, pero siempre tuve la curiosidad de saber como se hacían las páginas web, es por eso que al día de hoy sigo capacitandome con cursos online y de manera autodidacta. A continuación les comparto mi breve recorrido en esta materia, aún queda mucho camino por recorrer...</p>
     </section>
     
-    <footer>
+    <footer id="contacto">
         <div class="contenedor-datos-footer">
             <div class="datos-footer">
                 <div class="cont-datos">
                     <p><i class="far fa-address-card"></i>Leonel Sosa</p>
                     <p><i class="fab fa-whatsapp"></i>+549 358-4879692</p>
                     <p><i class="far fa-envelope"></i>leo.vm.cba@gmail.com</p>
-                    <a href="https://github.com/iam-leo"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://github.com/iam-leo" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 </div>
             </div>
-            
+
             <div class="enlaces-footer">
                 <ul class="cont-enlaces">
-                    <li><a href="#" class="enlacesNav">Inicio</a></li>
-                    <li><a href="#" class="enlacesNav">Portfolio</a></li>
-                    <li><a href="#" class="enlacesNav">Sobre mí</a></li>
+                    <li><a href="#inicio" class="enlacesNav">Inicio</a></li>
+                    <li><a href="#portfolio" class="enlacesNav">Portfolio</a></li>
+                    <li><a href="#sobre-mi" class="enlacesNav">Sobre mí</a></li>
                 </ul>
             </div>
         </div>
