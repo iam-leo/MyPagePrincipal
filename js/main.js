@@ -25,7 +25,7 @@ setTimeout(function(){
 
 const typed = new Typed('.typed', {
     strings: ['Diseño y Desarrollo Web.'],
-    startDelay: 4000,
+    startDelay: 2500,
     typeSpeed: 75,
     backSpeed: 75,
     backDelay: 1500,
