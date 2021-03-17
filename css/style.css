@@ -56,7 +56,6 @@ section{
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* height: 30%; */
     padding: 25px 0;
 }
 
@@ -87,8 +86,12 @@ section{
 .imagen-perfil{
     width: 350px;
     height: 350px;
-    background-color: #fff;
+    background-image: url('../img/imagen_perfil2.jpg');
+    background-position: center;
+    background-size: cover;
+    border: 2px solid #02f9fa;
     border-radius: 100px 0 100px 0;
+    box-shadow: 10px 10px 15px #000000;
 }
 
 .header .contenedor-titulo{
@@ -98,8 +101,6 @@ section{
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
-    /* width: 100%;
-    height: 80%; */
 }
 
 .contenedor-titulo h1{
@@ -116,7 +117,6 @@ section{
     position: absolute;
     font-family: 'Caveat', cursive;
     color: #ffffff;
-    /* text-align: center; */
     font-size: 2.5vw;
     transform: rotateZ(-2deg);
 }
@@ -176,15 +176,17 @@ section{
     }
 }
 
-/* ---- -- portfolio -- ----*/
+/* ---- -- Portfolio y Sobre mi-- ----*/
 
-.contenedor-cards{
+.contenedor-cards,
+.contenedor-certificados{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-.card-proyecto{
+.card-proyecto,
+.card-certificado{
     margin-top: 20px;
     padding-bottom: 10px;
     width: 28vw;
@@ -193,7 +195,8 @@ section{
     border-radius: 25px 0 25px 0;
 }
 
-.card-proyecto img{
+.card-proyecto img,
+.card-certificado img{
     width: 100%;
     height: 200px;
     border-radius: 25px 0 0 0;
@@ -201,25 +204,23 @@ section{
     background-size: cover;
 }
 
-.card-proyecto a{
+.card-proyecto a,
+.card-certificado a{
     text-decoration: none;
     color: #fff;
-    padding: 5px;
     font-family: 'Caveat', cursive;
     font-size: 20px;
 }
 
-/* ---- -- Sobre mí -- ----*/
-section#sobre-mi{
-    padding: 0 50px;
-}
-
+section#portfolio p,
 section#sobre-mi p{
-    padding: 0 50px;
+    padding: 10px 100px 30px;
     font-size: 18px;
     font-family: 'Baloo 2', cursive;
     font-weight: 400;
+    text-align: center;
 }
+
 
 /* ---- -- Footer -- ----*/
 footer{
@@ -278,7 +279,7 @@ footer{
 }
 
 .enlaces-footer li{
-    list-style: none;
+    list-style: circle;
     padding: 5px;
 }
 
@@ -297,6 +298,18 @@ footer{
     border-left: 1px solid #ffffff;
 }
 
+@media only screen and (max-width: 1000px){
+    .header .contenedor-titulo {
+        padding: 100px 40px;
+    }
+    .imagen-perfil{
+        width: 300px;
+        height: 300px;
+        padding-left: 20px;
+        border-radius: 80px 0 80px 0;
+    }
+}
+
 @media only screen and (max-width: 768px){
     .header .contenedor-titulo{
         display: flex;
@@ -310,6 +323,7 @@ footer{
     .imagen-perfil{
         width: 250px;
         height: 250px;
+        margin-bottom: 30px;
         border-radius: 80px 0 80px 0;
     }
 
@@ -325,14 +339,90 @@ footer{
         font-size: 3.5vw;
     }
 
-    /* ---- -- Portfolio -- ----*/
-    .contenedor-cards {
+    /* ---- -- Portfolio & Sobre mi-- ----*/
+    .contenedor-cards,
+    .contenedor-certificados {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .card-proyecto{
+    .card-proyecto,
+    .card-certificado{
         width: 38vw;
+        margin: 10px auto;
+    }
+
+    .contenedor-cards{
+        margin-top: 15px;
     }
     
-    
+    /* ---- -- Footer -- ----*/
+    .enlaces-footer{
+        border: none;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .menu ul li a{
+        font-size: 16px;
+        padding: 5px 8px 0 8px;
+        letter-spacing: 1px;
+    }
+
+    .header .contenedor-titulo{
+        padding: 50px 20px 0 20px;
+    }
+
+    .imagen-perfil{
+        width: 220px;
+        height: 220px;
+    }
+
+    .contenedor-titulo h1{
+        margin: 40px 0 20px 0;
+    }
+
+    section h2{
+        font-size: 6vw;
+    }
+
+    .contenedor-cards,
+    .contenedor-certificados {
+        grid-template-columns:  1fr;
+    }
+
+    .card-proyecto, 
+    .card-certificado {
+        width: 68vw;
+    }
+
+    /* ---- -- Portfolio & Sobre mi -- ----*/
+    section#portfolio p,
+    section#sobre-mi p{
+        padding: 10px 0;
+        font-size: 15px;
+    }
+
+    /* ---- -- Footer -- ----*/
+    .datos-footer{
+        width: 60%;
+    }
+
+    .enlaces-footer{
+        width: 40%;
+    }
+
+    .datos-footer,
+    .enlaces-footer{
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .datos-footer{
+        padding-left: 10px;
+    }
+
+    .datos-footer i{
+        padding-right: 7px;
+        font-size: 15px;
+    }
 }
